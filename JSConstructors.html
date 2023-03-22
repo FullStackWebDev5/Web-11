@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// JS Constructors: A blueprint/template for you JS objects
+		// [Good practive] Name of constructor should always be in Pascal case
+		// let ankitDetails = {
+		// 	firstName: 'Ankit',
+		// 	lastName: 'Rawat',
+		// 	sayHi: function () {
+		// 		console.log('Hi')
+		// 	}
+		// }
+		// let vishweshDetails = {
+		// 	firstName: 'Vishwesh',
+		// 	lastName: 'Goud',
+		// 	sayHi: function () {
+		// 		console.log('Hi')
+		// 	}
+		// }
+
+		function Student(firstName, lastName, gender) {
+			this.firstName = firstName
+			this.lastName = lastName
+			this.country = 'India'
+			this.gender = gender
+			this.sayHi = function() {
+				console.log('Hi')
+			}
+		}
+
+		const ankitDetails = new Student('Ankit', 'Rawat');
+		console.log(ankitDetails)
+		let vishweshDetails = new Student('Vishwesh', 'Goud');
+		console.log(vishweshDetails)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

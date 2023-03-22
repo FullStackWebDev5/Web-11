@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Call Apply Bind</title>
+	<script>
+		// Function Methods: Call, Apply, Bind
+		let ankitDetails = {
+			firstName: 'Ankit',
+			lastName: 'Rawat',
+		}
+		let vishweshDetails = {
+			firstName: 'Vishwesh',
+			lastName: 'Goud',
+		}
+
+		function sayFullName(country) {
+			console.log(this.firstName + ' ' + this.lastName + ' | ' + country);
+		}
+
+		// sayFullName.call(ankitDetails, 'India')
+		// sayFullName.call(vishweshDetails, 'USA')
+
+		// sayFullName.apply(ankitDetails, ['India'])
+		// sayFullName.apply(vishweshDetails, ['USA'])
+
+		// let sayFullNameUpdated = sayFullName.bind(ankitDetails)
+		// sayFullNameUpdated()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

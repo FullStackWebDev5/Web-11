@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Basics</title>
+	<script>
+		/*
+			### null vs undefined
+			let student1 = {
+				firstName: 'Abhishek',
+				lastName: 'Dukare',
+				batchNo: 11,
+			}
+			let student2 = {
+				firstName: 'Akash',
+				lastName: null,
+				batchNo: 11,
+			}
+			console.log(student2.lastName)
+
+			-----------------------------
+			### Type coercion
+			==: Equality operator
+			===: Strict equality operator/ identical operator
+			console.log('5' == 5)
+
+			-----------------------------
+			### Declaration, Assignment, Re-assignment
+			var x // Declaration
+			var x = 5 // Initializiation
+			x = 10 // Re-assignment
+
+			-----------------------------
+			### Different data types ( Primitive and Non Primitive )
+			- Primitive
+				- Number
+				- String
+				- Boolean
+				- undefined
+				- null
+			- Non-Primitive
+				- Object
+
+			-----------------------------
+			### Strings (Immutability), Arrays (Mutability), Objects
+			let arr = [2, 1, 9, 7, 10]
+			arr[0] = 100
+			console.log(arr)
+
+			let str = 'Gourav'
+			str[2] = 'z'
+			console.log(str)
+
+			Object.freeze() - Makes object immutable. Ensures that no furter updates can be made to that object
+
+			-----------------------------
+			### Scope
+			- Block
+			- Function or Local
+			- Global
+
+			- let and const introduced in es6
+			- let can be used for block scope scope
+			- const can be used to keep a value constant, re-assignment is not allowed
+
+			var x = 5
+			var x = 10
+			console.log(x)
+
+			let x
+			{
+				x = 5
+				console.log(x)
+			}
+			console.log(x)
+
+			function abc() {
+				let x = 10
+				{
+					console.log(x)
+				}
+			}
+			abc()
+
+			let x = 10
+			function abc() {
+				console.log(x)
+			}
+			abc()
+			{
+				console.log(x)
+			}
+
+			const x = 10
+			x = 1000
+			console.log(x)
+
+			-----------------------------
+			### Hoisting
+			- All declarations in JS are hoisted to the top before JS code execution
+					console.log(x)
+			var x
+			abc()
+			function abc() {
+				console.log('abc')
+			}
+
+			a = 10
+			console.log(a)
+		*/
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
