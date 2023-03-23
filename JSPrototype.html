@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Prototype</title>
+	<script>
+		// Prototype: Original model for all data type, rest of the data types will copy pattern from the original model
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+		// console.log(obj1)
+
+		// let arr = [2, 4, 10]
+		// console.log(arr.__proto__.__proto__.__proto__)
+
+		// let x = new Number(5)
+		// console.log(x)
+
+		/* ---------------------------------------------------------------- */
+		// Prototypal Chain
+		// obj1 -> Object -> null
+		// arr -> Array -> Object -> null
+		// num -> Number -> Object -> null
+		// str -> String -> Object -> null
+
+		// Object.create()
+		// let obj1 = {
+		// 	a: 5,
+		// 	b: 10
+		// }
+
+		// let obj2 = Object.create(obj1);
+		// obj2.c = 15
+		// console.log(obj2)
+
+		// obj2 -> obj1 -> Object -> null
+
+		// Grandfater: surname, DNA
+		// Father: houseName
+		// Son: firstName
+
+		// const grandFather = {
+		// 	surname: 'Sharma',
+		// 	dna: '123'
+		// }
+		// const father = Object.create(grandFather)
+		// father.houseName = 'Aashiyana'
+		// const son = Object.create(father)
+		// son.firstName = 'Arbaz'
+
+		// console.log(son)
+		// console.log(son.houseName)
+
+		// Prototypal Chain: son -> father -> grandFather -> Object -> null
+
+		/* ---------------------------------------------------------------- */
+		// function Student(firstName, lastName) {
+		// 	this.firstName = firstName
+		// 	this.lastName = lastName
+		// }
+
+		// // Set properties/methods of prototype
+		// Student.prototype.country = 'India'
+		// Student.prototype.sayHi = function() {
+		// 	console.log('Hi')
+		// }
+
+		// const ankitDetails = new Student('Ankit', 'Rawat');
+		// console.log(ankitDetails)
+		// let vishweshDetails = new Student('Vishwesh', 'Goud');
+		// console.log(vishweshDetails)
+
+		/* ---------------------------------------------------------------- */
+		// hasOwnProperty()
+
+		// console.log(son.hasOwnProperty('firstName'))
+		// console.log(son.hasOwnProperty('surname'))
+		/* ---------------------------------------------------------------- */
+
+		// let arr = new Array()
+		// arr.push(4, 1, 19)
+		// Array.prototype.tech = 'JS'
+
+		// console.log(arr.tech)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
