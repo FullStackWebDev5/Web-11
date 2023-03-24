@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Asynchronous JS</title>
+	<script>
+		// console.log(1)
+		// console.log(2)
+		// setTimeout(() => {
+		// 	console.log(3)
+		// }, 1000)
+		// console.log(4)
+		// console.log(5)
+
+		// setTimeout: Executes code after specified time interval in ms (Async is nature)
+		// console.log('Bomb will explode in 5 secs ...')
+		// let timeOut1 = setTimeout(() => {
+		// 	console.log('Boom!')
+		// }, 5000)
+		// clearTimeout()
+
+		// setInterval: Executes code repeatedly after specified time intervals in ms (Async is nature)
+		// setInterval(() => {
+		// 	console.log('Hi')
+		// }, 2000)
+		// clearInterval()
+
+		// const defuseBomb = () => {
+		// 	clearTimeout(timeOut1)
+		// 	console.log('Bomb defused!')
+		// }
+
+		// const func1 = function () {
+		// 	const a = 5
+		// 	const b = 10
+		// 	console.log('func1')
+		// 	func2(a, b)
+		// }
+		// const func2 = function (a, b) {
+		// 	console.log('func2')
+		// 	console.log(a + b)
+		// 	func3()
+		// }
+		// const func3 = function () {
+		// 	console.log('func3')
+		// }
+		// const execute = function () {
+		// 	func1()
+		// }
+		// execute()
+
+		// Execution Context: Environment where js code is executed.
+
+		/*
+			JS Code Execution:
+			- Creation phase: Javascript stores all variables/constants present in the entire JS file inside the memory (Stack: Primitive , Heap: Objects)
+			- Execution phase: Synchronously executes code one line after another
+		*/
+
+		/*
+			Call Stack
+			Web APIs (browser): setTimeout, setInterval, console, fetch, localStorage
+			Task Queue
+			Event Loop (Manager): Tracks Call Stack and Task queue, if there are no task pending in call stack, it will pick tasks from task queue and push it inside call stack
+		*/
+	</script>
+</head>
+<body>
+	<!-- <button onclick="defuseBomb()">Stop</button> -->
+</body>
+</html>
