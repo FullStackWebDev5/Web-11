@@ -90,21 +90,22 @@
 		// Constructor Inheritance
 		// setPrototypeOf();
 
-		// function IndianStudent() {
-		// 	this.country = 'India'
-		// 	this.sayHi = function() {
-		// 		console.log('Hi')
-		// 	}
-		// }
-		// const indianStudent1 = new IndianStudent();
-		// console.log(indianStudent1)
+		function IndianStudent() {
+			this.sayHi = function() {
+				console.log('Hi')
+			}
+		}
+		const indianStudent1 = new IndianStudent();
+		console.log(indianStudent1)
 
-		// function Student(firstName, lastName) {
-		// 	this.firstName = firstName
-		// 	this.lastName = lastName
-		// }
-		// Object.setPrototypeOf(Student, IndianStudent)
-		// console.log(Student.__proto__)
+		function Student(firstName, lastName) {
+			this.firstName = firstName
+			this.lastName = lastName
+		}
+		Object.setPrototypeOf(Student.prototype, IndianStudent.prototype)
+		IndianStudent.prototype.country = 'India'
+		let student1 = new Student('Rahul', 'Singh')
+		console.log(student1.country)
 	</script>
 </head>
 <body>
