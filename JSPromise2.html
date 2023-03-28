@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Promise</title>
+</head>
+<body>
+	<input type="text" id="person-name"><br><br>
+	<button onclick="joinQueue()">Join the queue</button>
+	<h1>Current Turn: <span id="current-person">Mahima</span></h1>
+	<script>
+		let queue = ['Mahima', 'Raj', 'Sagar']
+		console.log(queue)
+
+		function joinQueue() {
+			let personAdded = document.getElementById('person-name').value
+			queue.push(personAdded)
+			console.log(queue)
+
+			let promise1 = new Promise(function(resolve, reject) {
+				let interval1 = setInterval(function() {
+					let currentTurn = queue.shift()
+					document.getElementById('current-person').innerText = currentTurn
+
+					if(queue[0] === personAdded) {
+						clearInterval(interval1)
+						resolve("It's finally your turn!")
+					}
+				}, 2000)
+			})
+
+			promise1.then(function(resolvedValue) {
+				console.log(resolvedValue)
+			}).catch(function(rejectedValue) {
+				console.log(rejectedValue)
+			})
+		}
+	</script>
+</body>
+</html>

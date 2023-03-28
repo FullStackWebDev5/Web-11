@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Promise</title>
+	<script>
+		/*
+			Promise: It is an object that keeps track of the eventual completion or failure of any asynchronous task.
+
+			States:
+			- Pending
+			- Resolved / Fulfilled
+			- Rejected
+
+			- Create a promise object using Promise constructor
+				- new Promise(function (resolve, reject) {})
+				- resolve and reject are functions to resolve or reject the promise respectively
+
+			- Handling promise
+				- then method is used to handle resolved scenario
+				- catch method is used to handle rejection scenario
+				- finally method executes regardless of reject/resolve scenario
+		*/
+
+		// let promise1 = new Promise(function (resolve, reject) {
+		// 	setTimeout(function () {
+		// 		resolve()
+		// 	}, 5000)
+		// })
+
+		// promise1.then(function () {
+		// 	console.log('Resolved')
+		// }).catch(function () {
+		// 	console.log('Rejected')
+		// })
+
+		// Create a function to toss a coin
+		// function generate1or2() {
+		// 	return Math.ceil(Math.random() * 2)
+		// }
+
+		// let coinToss = new Promise(function (resolve, reject) {
+		// 	setTimeout(() => {
+		// 		let number = generate1or2()
+		// 		if(number === 1) {
+		// 			resolve('Head')
+		// 		} else {
+		// 			reject('Tail')
+		// 		}
+		// 	}, 2000)
+		// })
+
+		// coinToss.then(function (resolvedValue) {
+		// 	console.log(resolvedValue)
+		// }).catch(function (rejectedValue) {
+		// 	console.log(rejectedValue)
+		// }).finally(function () {
+		// 	console.log('Toss completed')
+		// })
+
+		// Async Await
+		let promise1 = new Promise(function (resolve, reject) {
+			setTimeout(function () {
+				reject('Hi!')
+			}, 2000)
+		})
+
+		// syntactic sugar for handling promises
+		// await - greedy for resolved state, return the resolved value
+
+		async function abc() {
+			try {
+				let resolvedValue = await promise1
+				console.log('Resolved : ', resolvedValue)
+			} catch (rejectedValue) {
+				console.log('Rejected : ', rejectedValue)
+			}
+		}
+		abc()
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
