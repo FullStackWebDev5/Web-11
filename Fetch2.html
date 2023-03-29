@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch</title>
+	<style>
+		.container {
+			display: flex;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+		}
+		.product-img {
+			height: 200px;
+			width: 200px;
+		}
+		.product-card {
+			width: 300px;
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			margin: 10px auto;
+			text-align: center;
+			padding: 20px;
+		}
+	</style>
+	<script>
+		let products = []
+
+		fetch('https://fakestoreapi.com/products').then(function(response) {
+			return response.json()
+		}).then(function(response) {
+			products = response
+			console.log(response)
+			displayProductsData()
+		}).catch(function(error) {
+			console.log(error)
+		})
+
+		function displayProductsData() {
+			let mainContainer = document.getElementById('main-container')
+			products.forEach(function(product) {
+				let productCard = document.createElement("div");
+				productCard.classList = 'product-card'
+
+				let productTitle = document.createElement("h3");
+				productTitle.innerText = product.title.slice(0, 50);
+
+				let productImg = document.createElement("img");
+				productImg.src = product.image;
+				productImg.alt = 'Product image'
+				productImg.classList = 'product-img'
+
+				let productPrice = document.createElement("h4");
+				productPrice.innerText = '₹ ' + product.price;
+
+				let productDesc = document.createElement("p")
+				productDesc.innerText = product.description.slice(0, 100)
+
+				let buyButton = document.createElement("button")
+				buyButton.innerText = 'Buy'
+
+				productCard.append(productTitle, productImg, productPrice, productDesc, buyButton);
+				mainContainer.appendChild(productCard);
+			})
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align:center">Marketplace</h1>
+	<div class="container" id="main-container">
+	</div>
+</body>
+</html>

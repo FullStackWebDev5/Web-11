@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fetch</title>
+	<style>
+		.container {
+			display: flex;
+			justify-content: space-evenly;
+		}
+	</style>
+	<script>
+		/*
+			API: Application Programmer Interface
+
+			HTTPS Request Methods:
+			- GET: Fetch any information from the server
+			- POST: Add / Create information on the server, usually information to add (payload) is sent to the server as well.
+			- PUT: Update the information on the server
+			- DELETE: Delete the information on the server
+
+			fetch() 
+			- Used to make API calls
+			- is a promise
+		*/
+
+		let users = []
+
+		// Way 1
+		// fetch('https://reqres.in/api/users?page=2').then(function(response) {
+		// 	return response.json()
+		// }).then(function(response) {
+		// 	users = response.data
+		// 	console.log(response)
+		// 	displayUsersData()
+		// }).catch(function(error) {
+		// 	console.log(error)
+		// })
+
+		// Way 2
+		async function handleResponse () {
+			try {
+				let response = await fetch('https://reqres.in/api/users?page=2')
+				users = await response.json()
+				displayUsersData()
+			} catch (err) {
+				console.log(err)
+			}
+		}
+		handleResponse()
+
+		function displayUsersData() {
+			let mainContainer = document.getElementById('main-container')
+			console.log(users)
+			users.forEach(function(user) {
+				let userCard = document.createElement("div");
+				let userImg = document.createElement("img");
+				userImg.src = user.avatar;
+				userImg.alt = 'User image'
+
+				let userName = document.createElement("h3");
+				userName.innerText = user.first_name + ' ' + user.last_name;
+
+				let userEmail = document.createElement("h5");
+				userEmail.innerText = user.email;
+
+				userCard.append(userImg, userName, userEmail);
+				mainContainer.appendChild(userCard);
+			})
+		}
+	</script>
+</head>
+<body>
+	<h1 style="text-align:center">Users</h1>
+	<div class="container" id="main-container">
+	</div>
+</body>
+</html>
