@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyDWEfqO6tftghUNjvOKO7MYhPcgY4sExkg";
+const API_KEY = "";
 let searchResultsDiv = document.getElementById("searchResults");
 
 async function searchVideo() {
