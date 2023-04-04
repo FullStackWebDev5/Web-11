@@ -1,0 +1,22 @@
+#main-container {
+	margin: 10px auto;
+	margin: 10px auto;
+	width: 500px;
+	text-align: center;
+	background-color: #eee;
+	padding: 20px 10px;
+}
+
+#todo-input {
+	padding: 5px;
+	font-size: 1.2rem;
+}
+#add-todo-btn {
+	padding: 8px 10px;
+}
+#todo-container ul li{
+	list-style: none;
+	padding: 10px;
+	background-color: #ddd;
+	margin: 10px 0;
+}

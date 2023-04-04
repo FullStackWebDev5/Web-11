@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To Do</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<div id="main-container">
+		<input type="text" placeholder="Enter to-do item" id="todo-input">
+		<button id="add-todo-btn" onclick="addTodo()">+</button>
+		<div id="todo-container">
+			<ul id="todo-container-ul">
+				<!-- <li>Do your HW <button>Edit</button><button>Delete</button></li> -->
+			</ul>
+		</div>
+		<input type="number" placeholder="Enter todo id to delete" id="todo-delete-input">
+		<button id="delete-todo-btn" onclick="deleteTodo()">Delete</button>
+		<br><br>
+
+		<input type="number" placeholder="Enter todo id to update" id="todo-update-id-input">
+		<input type="text" placeholder="Enter todo task to update" id="todo-update-task-input">
+		<button id="update-todo-btn" onclick="updateTodo()">Update</button>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
