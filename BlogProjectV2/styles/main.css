@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+	text-align: center;
+}
+
+/* MAIN */
+#search-div {
+	margin: 10px;
+}
+#blogs-list-table {
+	margin: 10px auto;
+}
+
+/* navbar related */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: black;
+	color: white;
+}
+a {
+  text-decoration: none;
+	color: white;
+}
+
+/* body related for inputs in create and edit page */
+#main {
+  width: 40%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#main > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* body related for table in main page */
+table,
+td,
+th {
+  border: 1px solid #cecece;
+	border-collapse: collapse;
+}

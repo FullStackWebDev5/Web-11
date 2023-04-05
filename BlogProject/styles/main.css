@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+/* navbar related */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: bisque;
+}
+a {
+  text-decoration: none;
+}
+
+/* body related for inputs in create and edit page */
+#main {
+  width: 40%;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+#main > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+/* body related for table in main page */
+table,
+td,
+th {
+  border: 1px solid #cecece;
+}
