@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Closures</title>
+	<script>
+		// function abc() {
+		// 	console.log('abc')
+		// }
+		// abc()
+
+		/*
+			HOF (Higher Order Functions)
+			- Function as an argument to another function (callback)
+			- Returning one function from another function
+		*/
+
+		/*
+			Closure: Inner function along with outer function execution context
+		*/
+
+		// function abc() {
+		// 	let x = 10
+		// 	function def() {
+		// 		console.log(x)
+		// 	}
+		// 	def()
+		// }
+		// abc()
+
+		// function abc() {
+		// 	let x = 10
+		// 	return function () {
+		// 		console.log(x)
+		// 	}
+		// }
+		
+		// const result = abc()
+		// result()
+
+		let count = 0
+		function abc() {
+			count = count + 1
+			console.log(count)
+		}
+</script>
+</head>
+<body>
+	<input type="text" placeholder="Search something ..." oninput="abc()">
+</body>
+</html>
