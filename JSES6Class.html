@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS ES6 Classes</title>
+	<script>
+		// Classes: A blueprint/template for you JS objects
+		// [Good practive] Name of class should always be in Pascal case
+		// constructor method: default method that gets invoked/called when an object is instantiated/ created from that class
+
+		// function Student(firstName, lastName) {
+		// 	this.firstName = firstName
+		// 	this.lastName = lastName
+		// 	this.sayHi = function() {
+		// 		console.log('Hi')
+		// 	}
+		// }
+
+		// class [ClassName] {
+		// 	constructor() {
+		// 		this.firstProperty = firstValue
+		//    ....
+		// 	}
+		// }
+
+		// class Student {
+		// 	constructor(firstName, lastName, likesIcecream) {
+		// 		this.firstName = firstName
+		// 		this.lastName = lastName
+		// 		this.likesIcecream = likesIcecream
+		// 		Student.totalStudentsCount++
+		// 	}
+
+		// 	static totalStudentsCount = 0
+
+		// 	static getTotalStudentCount() {
+		// 		return Student.totalStudentsCount
+		// 	}
+
+			// getters
+			// getFullName() {
+			// 	return `${this.firstName} ${this.lastName}`
+			// }
+
+			// setters
+			// updateLikesIcecream(likesIcecream) {
+			// 	this.likesIcecream = likesIcecream
+			// }
+		// }
+		// const ankitDetails = new Student('Ankit', 'Rawat', true);
+		// console.log(ankitDetails);
+		// let vishweshDetails = new Student('Vishwesh', 'Goud', false);
+		// console.log(vishweshDetails)
+
+		// console.log(Student.getTotalStudentCount())
+
+		/* ---------------------------------------------------------------- */
+
+		/*
+			Create a class for details of a candidate for Job Interview
+			1. Full Name
+			2. Tech Stack [Array]
+			3. Is the candidate fresher?
+			4. Years of experience
+			5. A method to display introduction of the candidate
+			6. A method to update the years of experience of a candidate
+		*/
+
+		// class Candidate {
+		// 	constructor(fullName, techStack, isFresher, yearsOfExperience) {
+		// 		this.fullName = fullName
+		// 		this.techStack = techStack
+		// 		this.isFresher = isFresher
+		// 		this.yearsOfExperience = yearsOfExperience
+		// 	}
+		// 	displayIntroduction() {
+		// 		const {
+		// 			fullName,
+		// 			techStack,
+		// 			isFresher,
+		// 			yearsOfExperience
+		// 		} = this
+		// 		console.log(`Candidate's name is ${fullName}. He is aware of ${techStack.join(', ')} technoligies. He ${isFresher ? 'is' : 'is not'} a fresher.`)
+		// 	}
+		// 	updateYearOfExperience(newValue) {
+		// 		this.yearsOfExperience = newValue
+
+		// 		if(newValue > 0){
+		// 			this.isFresher = false
+		// 		}
+		// 	}
+		// }
+
+		// const patilDetails = new Candidate(
+		// 	'Patil Arvind',
+		// 	['HTML', 'CSS', 'JS'],
+		// 	true,
+		// 	0
+		// )
+		// patilDetails.displayIntroduction()
+		// patilDetails.updateYearOfExperience(2)
+		// console.log(patilDetails)
+
+		/* ---------------------------------------------------------------- */
+		// Inheritance
+		// extends: define parent-child relationship
+		// super: call the parent class constructor
+
+		/*
+			Person Class (Parent)
+			- firstName
+			- lastName
+			- age
+
+
+			Student Class (Child)
+			- classNo
+			- rollNo
+		*/
+
+		// class Person {
+		// 	constructor(firstName, lastName, age) {
+		// 		this.firstName = firstName
+		// 		this.lastName = lastName
+		// 		this.age = age
+		// 	}
+
+		// 	displayBasicsDetails() {
+		// 		console.log(this.firstName, this.lastName, this.age)
+		// 	}
+		// }
+
+		// const vineet = new Person('Vineet', 'Singh', 22)
+		// console.log(vineet)
+
+		// class Student extends Person {
+		// 	constructor(firstName, lastName, age, classNo, rollNo) {
+		// 		super(firstName, lastName, age)
+		// 		this.classNo = classNo
+		// 		this.rollNo = rollNo
+		// 	}
+		// }
+
+		// const tushar = new Student('Tushar', 'Sutar', 23, '3rd year', 62)
+		// console.log(tushar)
+		// tushar.displayBasicsDetails()
+		/* ---------------------------------------------------------------- */
+		// class Stack {
+		// 	constructor() {
+		// 		this.length = 0
+		// 		this.stack = []
+		// 	}
+
+		// 	push(newElement) {
+		// 		this.stack.push(newElement)
+		// 		this.length++
+		// 	}
+
+		// 	pop() {
+		// 		this.length--
+		// 		return this.stack.pop()
+		// 	}
+		// }
+
+		// const stack1 = new Stack()
+		// stack1.push(5)
+		// stack1.push(10)
+		// console.log(stack1.pop())
+		// console.log(stack1)
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
